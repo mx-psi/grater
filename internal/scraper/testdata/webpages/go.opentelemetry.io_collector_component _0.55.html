@@ -1,0 +1,3932 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-layout="">
+  <head>
+    
+    <script>
+      window.addEventListener('error', window.__err=function f(e){f.p=f.p||[];f.p.push(e)});
+    </script>
+    <script>
+      (function() {
+        const theme = document.cookie.match(/prefers-color-scheme=(light|dark|auto)/)?.[1]
+        if (theme) {
+          document.querySelector('html').setAttribute('data-theme', theme);
+        }
+      }())
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+  <meta name="robots" content="noindex">
+
+    <meta class="js-gtmID" data-gtmid="GTM-W8MVQXG">
+    <link rel="shortcut icon" href="/static/shared/icon/favicon.ico">
+    
+    <link href="/static/frontend/frontend.min.css?version=prod-frontend-00042-mab" rel="stylesheet">
+    
+  <title>component package importedby - go.opentelemetry.io/collector/component - Go Packages</title>
+
+    
+  <link href="/static/frontend/unit/unit.min.css?version=prod-frontend-00042-mab" rel="stylesheet">
+  
+  <link href="/static/frontend/unit/importedby/importedby.min.css?version=prod-frontend-00042-mab" rel="stylesheet">
+
+
+  </head>
+  <body>
+    
+    <script>
+      function loadScript(src, mod = true) {
+        let s = document.createElement('script');
+        s.src = src;
+        if (mod) {
+          s.type = 'module';
+          s.async = true;
+          s.defer = true
+        }
+        document.head.appendChild(s);
+      }
+      loadScript("/third_party/dialog-polyfill/dialog-polyfill.js", false)
+      loadScript("/static/frontend/frontend.js");
+    </script>
+    
+  <header class="go-Header go-Header--full js-siteHeader">
+    <div class="go-Header-inner go-Header-inner--dark">
+      <nav class="go-Header-nav">
+        <a href="https://go.dev/" class="js-headerLogo" data-gtmc="nav link"
+            data-test-id="go-header-logo-link">
+          <img class="go-Header-logo" src="/static/shared/logo/go-white.svg" alt="Go">
+        </a>
+        <div class="go-Header-rightContent">
+          
+<div class="go-SearchForm js-searchForm">
+  <form
+    class="go-InputGroup go-ShortcutKey go-SearchForm-form"
+    action="/search"
+    data-shortcut="/"
+    data-shortcut-alt="search"
+    data-gtmc="search form"
+    aria-label="Search for a package"
+    role="search"
+  >
+    <input name="q" class="go-Input js-searchFocus" aria-label="Search for a package" type="search"
+        autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"
+        placeholder="Search packages or symbols"
+        value="" />
+    <input name="m" value="" hidden>
+    <button class="go-Button go-Button--inverted" aria-label="Submit search">
+      <img
+        class="go-Icon"
+        height="24"
+        width="24"
+        src="/static/shared/icon/search_gm_grey_24dp.svg"
+        alt=""
+      />
+    </button>
+  </form>
+  <button class="go-SearchForm-expandSearch js-expandSearch" data-gtmc="nav button"
+      aria-label="Open search" data-test-id="expand-search">
+    <img class="go-Icon go-Icon--inverted" height="24" width="24"
+        src="/static/shared/icon/search_gm_grey_24dp.svg" alt="">
+  </button>
+</div>
+
+          <ul class="go-Header-menu">
+            <li class="go-Header-menuItem">
+              <a href="https://go.dev/solutions/" data-gtmc="nav link">Why Go</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a href="https://go.dev/learn/" data-gtmc="nav link">Get Started</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a href="https://golang.org/doc/" data-gtmc="nav link">Docs</a>
+            </li>
+            <li class="go-Header-menuItem go-Header-menuItem--active">
+              <a href="/" data-gtmc="nav link">Packages</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a href="https://play.golang.org/" data-gtmc="nav link">Play</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a href="https://go.dev/blog/" data-gtmc="nav link">Blog</a>
+            </li>
+          </ul>
+          <button class="go-Header-navOpen js-headerMenuButton go-Header-navOpen--white" data-gtmc="nav button" aria-label="Open navigation">
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <aside class="go-NavigationDrawer js-header">
+    <nav>
+      <div class="go-NavigationDrawer-header">
+        <a href="https://go.dev/" tabindex="-1">
+          <img class="go-NavigationDrawer-logo" src="/static/shared/logo/go-blue.svg" alt="Go.">
+        </a>
+      </div>
+      <ul class="go-NavigationDrawer-list">
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://go.dev/solutions/" tabindex="-1">Why Go</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://go.dev/learn/" tabindex="-1">Get Started</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://golang.org/doc/" tabindex="-1">Docs</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem go-NavigationDrawer-listItem--active">
+            <a href="/" tabindex="-1">Packages</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://play.golang.org/" tabindex="-1">Play</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://go.dev/blog" tabindex="-1">Blog</a>
+          </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="go-NavigationDrawer-scrim js-scrim" role="presentation"></div>
+
+    
+  <main class="go-Main">
+    <div class="go-Main-banner" role="alert"></div>
+    <header class="go-Main-header js-mainHeader">
+  
+  
+  <nav class="go-Main-headerBreadcrumb go-Breadcrumb" aria-label="Breadcrumb" data-test-id="UnitHeader-breadcrumb">
+    <ol>
+      
+        
+          <li data-test-id="UnitHeader-breadcrumbItem">
+            <a href="/" data-gtmc="breadcrumb link">Discover Packages</a>
+          </li>
+        
+          <li data-test-id="UnitHeader-breadcrumbItem">
+            <a href="/go.opentelemetry.io/collector@v0.55.0" data-gtmc="breadcrumb link">go.opentelemetry.io/collector</a>
+          </li>
+        
+        <li>
+          <a href="/go.opentelemetry.io/collector@v0.55.0/component" data-gtmc="breadcrumb link" aria-current="location"
+              data-test-id="UnitHeader-breadcrumbCurrent">
+            component
+          </a>
+          
+            <button
+              class="go-Button go-Button--inline go-Clipboard js-clipboard"
+              title="Copy path to clipboard.&#10;&#10;go.opentelemetry.io/collector/component"
+              aria-label="Copy Path to Clipboard"
+              data-to-copy="go.opentelemetry.io/collector/component"
+              data-gtmc="breadcrumbs button"
+            >
+              <img
+                class="go-Icon go-Icon--accented"
+                height="24"
+                width="24"
+                src="/static/shared/icon/content_copy_gm_grey_24dp.svg"
+                alt=""
+              >
+            </button>
+          
+        
+      </li>
+    </ol>
+  </nav>
+
+  <div class="go-Main-headerContent">
+    
+  <div class="go-Main-headerTitle js-stickyHeader">
+    <a class="go-Main-headerLogo" href="https://go.dev/" aria-hidden="true" tabindex="-1" data-gtmc="header link" aria-label="Link to Go Homepage">
+      <img height="78" width="207" src="/static/shared/logo/go-blue.svg" alt="Go">
+    </a>
+    <h1 class="UnitHeader-titleHeading" data-test-id="UnitHeader-title">component</h1>
+    
+      <span class="go-Chip go-Chip--inverted">package</span>
+    
+    
+      
+        <button
+          class="go-Button go-Button--inline go-Clipboard js-clipboard"
+          title="Copy path to clipboard.&#10;&#10;go.opentelemetry.io/collector/component"
+          aria-label="Copy Path to Clipboard"
+          data-to-copy="go.opentelemetry.io/collector/component"
+          data-gtmc="title button"
+          tabindex="-1"
+        >
+          <img
+            class="go-Icon go-Icon--accented"
+            height="24"
+            width="24"
+            src="/static/shared/icon/content_copy_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      
+    
+  </div>
+
+    
+  <div class="go-Main-headerDetails">
+    
+      
+  <span class="go-Main-headerDetailItem">
+    <a class="UnitHeader-backLink" href="/go.opentelemetry.io/collector@v0.55.0/component" data-gtmc="header link">
+      <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_left_alt_gm_grey_24dp.svg" alt="">
+      Go to main page
+    </a>
+  </span>
+
+    
+  </div>
+  
+  <div class="UnitHeader-overflowContainer">
+    <svg class="UnitHeader-overflowImage" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+    </svg>
+    <select class="UnitHeader-overflowSelect js-selectNav" tabindex="-1">
+      <option value="/">Main</option>
+      <option value="/go.opentelemetry.io/collector@v0.55.0/component?tab=versions">
+        Versions
+      </option>
+      <option value="/go.opentelemetry.io/collector@v0.55.0/component?tab=licenses">
+        Licenses
+      </option>
+      
+        <option value="/go.opentelemetry.io/collector@v0.55.0/component?tab=imports">
+          Imports
+        </option>
+        <option value="/go.opentelemetry.io/collector@v0.55.0/component?tab=importedby">
+          Imported By
+        </option>
+      
+    </select>
+  </div>
+
+
+  </div>
+
+</header>
+    <aside class="go-Main-aside go-Main-aside--empty js-mainAside"></aside>
+    <nav class="go-Main-nav go-Main-nav--sticky js-mainNav" aria-label="Outline"></nav>
+    <article class="go-Main-article js-mainContent">
+  
+  <div class="ImportedBy">
+    
+      <div class="ImportedBy-heading">
+        <strong>Known importers:</strong> 366 (displaying 470 packages, including internal and invalid packages)
+      </div>
+      
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/bitbucket.org/Vipul_24/mongomock">bitbucket.org/Vipul_24/mongomock</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/AjohnsonLS/traceidextractor">github.com/AjohnsonLS/traceidextractor</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/AsakerMohd/aws-otel-collector/ (4)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/AsakerMohd/aws-otel-collector/cmd/awscollector">github.com/AsakerMohd/aws-otel-collector/cmd/awscollector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/AsakerMohd/aws-otel-collector/pkg/config">github.com/AsakerMohd/aws-otel-collector/pkg/config</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/AsakerMohd/aws-otel-collector/pkg/defaultcomponents">github.com/AsakerMohd/aws-otel-collector/pkg/defaultcomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/AsakerMohd/aws-otel-collector/pkg/lambdacomponents">github.com/AsakerMohd/aws-otel-collector/pkg/lambdacomponents</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/DataDog/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/DataDog/datadog-agent/pkg/otlp/internal/serializerexporter">github.com/DataDog/datadog-agent/pkg/otlp/internal/serializerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/DataDog/opentelemetry-collector-contrib/exporter/datadogexporter">github.com/DataDog/opentelemetry-collector-contrib/exporter/datadogexporter</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/Fyck-io/obfuscateattributesprocessor">github.com/Fyck-io/obfuscateattributesprocessor</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/GoogleCloudPlatform/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/GoogleCloudPlatform/opentelemetry-operations-collector/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/GoogleCloudPlatform/opentelemetry-operations-collector/cmd/otelopscol">github.com/GoogleCloudPlatform/opentelemetry-operations-collector/cmd/otelopscol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/GoogleCloudPlatform/opentelemetry-operations-collector/processor/agentmetricsprocessor">github.com/GoogleCloudPlatform/opentelemetry-operations-collector/processor/agentmetricsprocessor</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/collector/googlemanagedprometheus">github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/collector/googlemanagedprometheus</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/McSick/datadogreceiver">github.com/McSick/datadogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/Nicolas-MacBeth/opentelemetry-collector-contrib/receiver/prometheusexecreceiver">github.com/Nicolas-MacBeth/opentelemetry-collector-contrib/receiver/prometheusexecreceiver</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/SumoLogic/sumologic-otel-collector/ (6)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/exporter/sumologicexporter">github.com/SumoLogic/sumologic-otel-collector/pkg/exporter/sumologicexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/extension/sumologicextension">github.com/SumoLogic/sumologic-otel-collector/pkg/extension/sumologicextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/processor/cascadingfilterprocessor">github.com/SumoLogic/sumologic-otel-collector/pkg/processor/cascadingfilterprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/processor/sourceprocessor">github.com/SumoLogic/sumologic-otel-collector/pkg/processor/sourceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/processor/sumologicsyslogprocessor">github.com/SumoLogic/sumologic-otel-collector/pkg/processor/sumologicsyslogprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/SumoLogic/sumologic-otel-collector/pkg/receiver/telegrafreceiver">github.com/SumoLogic/sumologic-otel-collector/pkg/receiver/telegrafreceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/a-feld/cumulativetodeltaprocessor">github.com/a-feld/cumulativetodeltaprocessor</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/asakermohd/aws-otel-collector/ (4)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/asakermohd/aws-otel-collector/cmd/awscollector">github.com/asakermohd/aws-otel-collector/cmd/awscollector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/asakermohd/aws-otel-collector/pkg/config">github.com/asakermohd/aws-otel-collector/pkg/config</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/asakermohd/aws-otel-collector/pkg/defaultcomponents">github.com/asakermohd/aws-otel-collector/pkg/defaultcomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/asakermohd/aws-otel-collector/pkg/lambdacomponents">github.com/asakermohd/aws-otel-collector/pkg/lambdacomponents</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/aws-observability/aws-otel-collector/ (4)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/aws-observability/aws-otel-collector/cmd/awscollector">github.com/aws-observability/aws-otel-collector/cmd/awscollector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/aws-observability/aws-otel-collector/internal/receiver/awscontainerinsightreceiver">github.com/aws-observability/aws-otel-collector/internal/receiver/awscontainerinsightreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/aws-observability/aws-otel-collector/pkg/defaultcomponents">github.com/aws-observability/aws-otel-collector/pkg/defaultcomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/aws-observability/aws-otel-collector/pkg/lambdacomponents">github.com/aws-observability/aws-otel-collector/pkg/lambdacomponents</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/cilium/hubble-otel/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/cilium/hubble-otel/receiver">github.com/cilium/hubble-otel/receiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/cilium/hubble-otel/testutil">github.com/cilium/hubble-otel/testutil</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/cisco/opentelemetry-collector-contrib/receiver/prometheusremotewritereceiver">github.com/cisco/opentelemetry-collector-contrib/receiver/prometheusremotewritereceiver</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/codeboten/newcomponents/ (4)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/codeboten/newcomponents/exporter/mynewexporter">github.com/codeboten/newcomponents/exporter/mynewexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/codeboten/newcomponents/processor/mynewprocessor">github.com/codeboten/newcomponents/processor/mynewprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/codeboten/newcomponents/receiver/mynewreceiver">github.com/codeboten/newcomponents/receiver/mynewreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/codeboten/newcomponents/receiver/mynewscraper">github.com/codeboten/newcomponents/receiver/mynewscraper</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/dashpole/opentelemetry-operations-go/exporter/collector/googlemanagedprometheus">github.com/dashpole/opentelemetry-operations-go/exporter/collector/googlemanagedprometheus</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/devops-genuine/opentelemetry-collector-contrib/exporter/awsxrayexporter">github.com/devops-genuine/opentelemetry-collector-contrib/exporter/awsxrayexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/esdrasbrz/opentelemetry-extensions/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/esdrasbrz/opentelemetry-extensions/processor/tracebatchprocessor">github.com/esdrasbrz/opentelemetry-extensions/processor/tracebatchprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/esdrasbrz/opentelemetry-extensions/processor/tracebatchprocessor/cmd">github.com/esdrasbrz/opentelemetry-extensions/processor/tracebatchprocessor/cmd</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/fangyi-zhou/mpst-tracing/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/fangyi-zhou/mpst-tracing/exporters/mpstconformancemonitoringexporter">github.com/fangyi-zhou/mpst-tracing/exporters/mpstconformancemonitoringexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/fangyi-zhou/mpst-tracing/processors/mpstconformancemonitoringprocessor">github.com/fangyi-zhou/mpst-tracing/processors/mpstconformancemonitoringprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/fangyi-zhou/mpst-tracing/processors/mpstmetadatataggingprocessor">github.com/fangyi-zhou/mpst-tracing/processors/mpstmetadatataggingprocessor</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/filipsnastins/elasticsearchexporter">github.com/filipsnastins/elasticsearchexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/foxlegend/opentelemetry-collector-opentsdb-contrib/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/foxlegend/opentelemetry-collector-opentsdb-contrib/exporter/opentsdbexporter">github.com/foxlegend/opentelemetry-collector-opentsdb-contrib/exporter/opentsdbexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/foxlegend/opentelemetry-collector-opentsdb-contrib/receiver/opentsdbreceiver">github.com/foxlegend/opentelemetry-collector-opentsdb-contrib/receiver/opentsdbreceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/fsolleza/stdoutexporter">github.com/fsolleza/stdoutexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/googlecloudplatform/appengine-sidecars-docker/ (4)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector">github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/dockerstats">github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/dockerstats</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/nginxreceiver">github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/nginxreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/vmagereceiver">github.com/googlecloudplatform/appengine-sidecars-docker/opentelemetry_collector/receiver/vmagereceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/grafana/ (11)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/grafana/agent/ (9)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/integrations/v2/app_agent_receiver">github.com/grafana/agent/pkg/integrations/v2/app_agent_receiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces">github.com/grafana/agent/pkg/traces</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/automaticloggingprocessor">github.com/grafana/agent/pkg/traces/automaticloggingprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/internal/traceutils">github.com/grafana/agent/pkg/traces/internal/traceutils</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/noopreceiver">github.com/grafana/agent/pkg/traces/noopreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/promsdprocessor">github.com/grafana/agent/pkg/traces/promsdprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/pushreceiver">github.com/grafana/agent/pkg/traces/pushreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/remotewriteexporter">github.com/grafana/agent/pkg/traces/remotewriteexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/agent/pkg/traces/servicegraphprocessor">github.com/grafana/agent/pkg/traces/servicegraphprocessor</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/tempo/modules/distributor/receiver">github.com/grafana/tempo/modules/distributor/receiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/grafana/xk6-client-tracing">github.com/grafana/xk6-client-tracing</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/honeycombio/opentelemetry-collector-configs/timestampprocessor">github.com/honeycombio/opentelemetry-collector-configs/timestampprocessor</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/hypertrace/collector/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/hypertrace/collector/cmd/collector">github.com/hypertrace/collector/cmd/collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/hypertrace/collector/processors/tenantidprocessor">github.com/hypertrace/collector/processors/tenantidprocessor</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/ibm-observability/instanaexporter">github.com/ibm-observability/instanaexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/jaegertracing/ (36)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/jaegertracing/jaeger-opentelemetry-collector/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger-opentelemetry-collector/cmd/jaegercol">github.com/jaegertracing/jaeger-opentelemetry-collector/cmd/jaegercol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger-opentelemetry-collector/exporter/elasticsearch">github.com/jaegertracing/jaeger-opentelemetry-collector/exporter/elasticsearch</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger-opentelemetry-collector/internal/components">github.com/jaegertracing/jaeger-opentelemetry-collector/internal/components</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/jaegertracing/jaeger/ (33)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/collector/app">github.com/jaegertracing/jaeger/cmd/collector/app</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/collector/app/handler">github.com/jaegertracing/jaeger/cmd/collector/app/handler</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/badgerexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/badgerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/cassandraexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/cassandraexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/elasticsearchexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/elasticsearchexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/grpcpluginexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/grpcpluginexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/jaegerexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/jaegerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/kafkaexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/kafkaexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/memoryexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/exporter/memoryexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/processor/resourceprocessor">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/processor/resourceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/jaegerreceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/jaegerreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/kafkareceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/kafkareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/zipkinreceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/app/receiver/zipkinreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/cmd/all-in-one">github.com/jaegertracing/jaeger/cmd/opentelemetry-collector/cmd/all-in-one</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/defaultcomponents">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/defaultcomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/defaultconfig">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/defaultconfig</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/badgerexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/badgerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/cassandraexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/cassandraexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/elasticsearchexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/elasticsearchexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/grpcpluginexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/grpcpluginexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/jaegerexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/jaegerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/kafkaexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/kafkaexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/memoryexporter">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/exporter/memoryexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/processor/resourceprocessor">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/processor/resourceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/jaegerreceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/jaegerreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/kafkareceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/kafkareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/zipkinreceiver">github.com/jaegertracing/jaeger/cmd/opentelemetry/app/receiver/zipkinreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/agent">github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/agent</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/all-in-one">github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/all-in-one</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/collector">github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/ingester">github.com/jaegertracing/jaeger/cmd/opentelemetry/cmd/ingester</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/jmacd/caspar.water/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jmacd/caspar.water/collector">github.com/jmacd/caspar.water/collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jmacd/caspar.water/sparkplug/sparkplugreceiver">github.com/jmacd/caspar.water/sparkplug/sparkplugreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jmacd/caspar.water/storage/fileexporter">github.com/jmacd/caspar.water/storage/fileexporter</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/jpkrohling/blockingprocessor">github.com/jpkrohling/blockingprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/kevinearls/splitbatchprocessor">github.com/kevinearls/splitbatchprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/kilingzhang/tracesanalysisexporter">github.com/kilingzhang/tracesanalysisexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/lefelys/opentelemetry-collector-contrib/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/lefelys/opentelemetry-collector-contrib/cmd/otelcontribcol">github.com/lefelys/opentelemetry-collector-contrib/cmd/otelcontribcol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/lefelys/opentelemetry-collector-contrib/exporter/awsxrayexporter">github.com/lefelys/opentelemetry-collector-contrib/exporter/awsxrayexporter</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/librato/opentelemetry-collector-contrib/exporter/solarwindsexporter">github.com/librato/opentelemetry-collector-contrib/exporter/solarwindsexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/lightstep/opentelemetry-lambda-extension">github.com/lightstep/opentelemetry-lambda-extension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/lupengamzn/aws-otel-collector/pkg/lambdacomponents">github.com/lupengamzn/aws-otel-collector/pkg/lambdacomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/maticnetwork/polygon-otel-collector/receiver/gethinfluxdbreceiver">github.com/maticnetwork/polygon-otel-collector/receiver/gethinfluxdbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/mindtastic/opentelemetry-transparency-processor">github.com/mindtastic/opentelemetry-transparency-processor</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/navneet1075/auditlogexporter (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/navneet1075/auditlogexporter">github.com/navneet1075/auditlogexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/navneet1075/auditlogexporter/cmd">github.com/navneet1075/auditlogexporter/cmd</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/ns1labs/orb/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/ns1labs/orb/agent/backend/pktvisor">github.com/ns1labs/orb/agent/backend/pktvisor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/ns1labs/orb/agent/otel/otlpexporter">github.com/ns1labs/orb/agent/otel/otlpexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/ns1labs/orb/agent/otel/pktvisorreceiver">github.com/ns1labs/orb/agent/otel/pktvisorreceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/ntippabhatla/opentelemetry-collector-contrib/receiver/yamasreceiver">github.com/ntippabhatla/opentelemetry-collector-contrib/receiver/yamasreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observIQ/opentelemetry-collector-contrib/receiver/sqlserverreceiver">github.com/observIQ/opentelemetry-collector-contrib/receiver/sqlserverreceiver</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/observiq/ (16)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/observiq/observiq-otel-collector/ (6)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/collector">github.com/observiq/observiq-otel-collector/collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/exporter/googlecloudexporter">github.com/observiq/observiq-otel-collector/exporter/googlecloudexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/factories">github.com/observiq/observiq-otel-collector/factories</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/processor/resourceattributetransposerprocessor">github.com/observiq/observiq-otel-collector/processor/resourceattributetransposerprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/receiver/pluginreceiver">github.com/observiq/observiq-otel-collector/receiver/pluginreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/observiq-otel-collector/receiver/varnishreceiver">github.com/observiq/observiq-otel-collector/receiver/varnishreceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/observiq/opentelemetry-collector-contrib/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-collector-contrib/receiver/vcenterreceiver">github.com/observiq/opentelemetry-collector-contrib/receiver/vcenterreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-collector-contrib/receiver/vcenterreceiver/internal/metadata">github.com/observiq/opentelemetry-collector-contrib/receiver/vcenterreceiver/internal/metadata</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/observiq/opentelemetry-components/ (8)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/cmd/otelcompcol">github.com/observiq/opentelemetry-components/cmd/otelcompcol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/couchdbreceiver">github.com/observiq/opentelemetry-components/receiver/couchdbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/elasticsearchreceiver">github.com/observiq/opentelemetry-components/receiver/elasticsearchreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/httpdreceiver">github.com/observiq/opentelemetry-components/receiver/httpdreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/mongodbreceiver">github.com/observiq/opentelemetry-components/receiver/mongodbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/mysqlreceiver">github.com/observiq/opentelemetry-components/receiver/mysqlreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/postgresqlreceiver">github.com/observiq/opentelemetry-components/receiver/postgresqlreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/observiq/opentelemetry-components/receiver/rabbitmqreceiver">github.com/observiq/opentelemetry-components/receiver/rabbitmqreceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/occamshub-dev/occams-otel-collector/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/occamshub-dev/occams-otel-collector/cmd/occamscol">github.com/occamshub-dev/occams-otel-collector/cmd/occamscol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/occamshub-dev/occams-otel-collector/receiver/grypereceiver">github.com/occamshub-dev/occams-otel-collector/receiver/grypereceiver</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/open-telemetry/ (253)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/open-telemetry/opentelemetry-collector-contrib/ (250)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema">github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema/docsgen">github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema/docsgen</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema/docsgen/docsgen">github.com/open-telemetry/opentelemetry-collector-contrib/cmd/configschema/docsgen/docsgen</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/alibabacloudlogserviceexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/alibabacloudlogserviceexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awskinesisexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awskinesisexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsprometheusremotewriteexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsprometheusremotewriteexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/azuremonitorexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/azuremonitorexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/carbonexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/carbonexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/clickhouseexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/clickhouseexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/coralogixexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/coralogixexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metadata/internal/ecs">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metadata/internal/ecs</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metrics">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/metrics</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/utils">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter/internal/utils</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/dynatraceexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/dynatraceexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticsearchexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/elasticsearchexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/f5cloudexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/f5cloudexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/fileexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/fileexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlecloudexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlecloudexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlecloudpubsubexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlecloudpubsubexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlemanagedprometheusexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/googlemanagedprometheusexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/honeycombexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/honeycombexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/humioexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/humioexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/influxdbexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/influxdbexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/jaegerexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/jaegerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/jaegerthrifthttpexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/jaegerthrifthttpexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kinesisexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kinesisexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/lightstepexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/lightstepexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/loadbalancingexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/loadbalancingexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/logzioexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/logzioexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/lokiexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/lokiexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/mezmoexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/mezmoexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/newrelicexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/newrelicexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/observiqexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/observiqexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/opencensusexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/opencensusexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/parquetexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/parquetexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sapmexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sapmexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sentryexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sentryexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxcorrelationexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxcorrelationexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter/internal/correlation">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter/internal/correlation</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/skywalkingexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/skywalkingexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/splunkhecexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/splunkhecexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackdriverexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/stackdriverexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sumologicexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sumologicexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tanzuobservabilityexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tanzuobservabilityexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tencentcloudlogserviceexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/tencentcloudlogserviceexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/uptraceexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/uptraceexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/exporter/zipkinexporter">github.com/open-telemetry/opentelemetry-collector-contrib/exporter/zipkinexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/asapauthextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/asapauthextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/awsproxy">github.com/open-telemetry/opentelemetry-collector-contrib/extension/awsproxy</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/awsxrayproxy">github.com/open-telemetry/opentelemetry-collector-contrib/extension/awsxrayproxy</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/bearertokenauthextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/bearertokenauthextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/fluentbitextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/fluentbitextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/httpforwarder">github.com/open-telemetry/opentelemetry-collector-contrib/extension/httpforwarder</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/jaegerremotesampling">github.com/open-telemetry/opentelemetry-collector-contrib/extension/jaegerremotesampling</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/jaegerremotesampling/internal">github.com/open-telemetry/opentelemetry-collector-contrib/extension/jaegerremotesampling/internal</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/jmxmetricextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/jmxmetricextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/jmxmetricsextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/jmxmetricsextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/oauth2clientauthextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/dockerobserver">github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/dockerobserver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/ecsobserver">github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/ecsobserver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/ecstaskobserver">github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/ecstaskobserver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/hostobserver">github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/hostobserver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/k8sobserver">github.com/open-telemetry/opentelemetry-collector-contrib/extension/observer/k8sobserver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/oidcauthextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/oidcauthextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension">github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/dbstorage">github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/dbstorage</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage">github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/storagetest">github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/storagetest</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/cwlogs">github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/cwlogs</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/ecsutil">github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws/ecsutil</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/components">github.com/open-telemetry/opentelemetry-collector-contrib/internal/components</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/otelcontribcore">github.com/open-telemetry/opentelemetry-collector-contrib/internal/otelcontribcore</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent">github.com/open-telemetry/opentelemetry-collector-contrib/internal/sharedcomponent</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/internal/stanza">github.com/open-telemetry/opentelemetry-collector-contrib/internal/stanza</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/pkg/resourcetotelemetry">github.com/open-telemetry/opentelemetry-collector-contrib/pkg/resourcetotelemetry</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza/adapter">github.com/open-telemetry/opentelemetry-collector-contrib/pkg/stanza/adapter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatorateprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatorateprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbyattrsprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbyattrsprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbytraceprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbytraceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/logstransformprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/logstransformprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricsgenerationprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricsgenerationprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/redactionprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/redactionprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/ec2">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/ec2</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/ecs">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/ecs</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/eks">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/eks</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/elasticbeanstalk">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/aws/elasticbeanstalk</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/azure">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/azure</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/azure/aks">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/azure/aks</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/consul">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/consul</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/docker">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/docker</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/env">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/env</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/gcp">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/gcp</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/system">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor/internal/system</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/routingprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/routingprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/schemaprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/schemaprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanmetricsprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanmetricsprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanmetricsprocessor/mocks">github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanmetricsprocessor/mocks</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor">github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/logs">github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/logs</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/metrics">github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/metrics</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/traces">github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor/internal/traces</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/activedirectorydsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/activedirectorydsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/activedirectorydsreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/activedirectorydsreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/aerospikereceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/aerospikereceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/aerospikereceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/aerospikereceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/apachereceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/apachereceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/apachereceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/apachereceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver/internal/ecsInfo">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver/internal/ecsInfo</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsecscontainermetricsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsecscontainermetricsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsfirehosereceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsfirehosereceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver/internal/udppoller">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver/internal/udppoller</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/bigipreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/bigipreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/bigipreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/bigipreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/carbonreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/carbonreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/cloudfoundryreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/cloudfoundryreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/collectdreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/collectdreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchbasereceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchbasereceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchbasereceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchbasereceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchdbreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchdbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchdbreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/couchdbreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/dockerstatsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/dockerstatsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/dotnetdiagnosticsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/dotnetdiagnosticsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/elasticsearchreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/elasticsearchreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/elasticsearchreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/elasticsearchreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/expvarreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/expvarreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/expvarreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/expvarreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/flinkmetricsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/flinkmetricsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/flinkmetricsreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/flinkmetricsreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/fluentforwardreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/fluentforwardreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudpubsubreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudpubsubreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudspannerreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/googlecloudspannerreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/cpuscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/cpuscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/diskscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/diskscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/diskscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/diskscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/loadscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/loadscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/loadscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/loadscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/memoryscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/memoryscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/networkscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/networkscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/networkscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/networkscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/pagingscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/pagingscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processesscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processesscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processesscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processesscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processscraper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processscraper/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver/internal/scraper/processscraper/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/httpdreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/httpdreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/iisreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/iisreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/iisreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/iisreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/influxdbreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/influxdbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerlegacyreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerlegacyreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jmxreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jmxreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/journaldreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/journaldreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/k8sclusterreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/k8sclusterreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/k8seventsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/k8seventsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkametricsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkametricsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kubeletstatsreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kubeletstatsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kubeletstatsreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kubeletstatsreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/memcachedreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/memcachedreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/memcachedreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/memcachedreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbatlasreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbatlasreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbatlasreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbatlasreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mongodbreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mysqlreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mysqlreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mysqlreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/mysqlreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nginxreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nginxreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nginxreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nginxreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nsxtreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nsxtreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nsxtreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/nsxtreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver/internal/ocmetrics">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver/internal/ocmetrics</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver/internal/octrace">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver/internal/octrace</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/podmanreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/podmanreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/postgresqlreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/postgresqlreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/postgresqlreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/postgresqlreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusexecreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusexecreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver/internal">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/prometheusreceiver/internal</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/rabbitmqreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/rabbitmqreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/rabbitmqreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/rabbitmqreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/receivercreator">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/receivercreator</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/redisreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/redisreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/redisreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/redisreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/riakreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/riakreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/riakreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/riakreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/saphanareceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/saphanareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/saphanareceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/saphanareceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sapmreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sapmreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/scraperhelper">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/scraperhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/signalfxreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/signalfxreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/simpleprometheusreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/simpleprometheusreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/skywalkingreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/skywalkingreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/splunkhecreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/splunkhecreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlqueryreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlqueryreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlserverreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlserverreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlserverreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/sqlserverreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/stanzareceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/stanzareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/statsdreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/statsdreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/syslogreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/syslogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/tcplogreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/tcplogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/udplogreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/udplogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/vcenterreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/vcenterreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/vcenterreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/vcenterreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/wavefrontreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/wavefrontreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/windowseventlogreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/windowseventlogreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/windowsperfcountersreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/windowsperfcountersreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zipkinreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zipkinreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zipkinscribereceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zipkinscribereceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zookeeperreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zookeeperreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zookeeperreceiver/internal/metadata">github.com/open-telemetry/opentelemetry-collector-contrib/receiver/zookeeperreceiver/internal/metadata</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/testbed/correctnesstests/metrics">github.com/open-telemetry/opentelemetry-collector-contrib/testbed/correctnesstests/metrics</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/testbed/datareceivers">github.com/open-telemetry/opentelemetry-collector-contrib/testbed/datareceivers</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/testbed/mockdatareceivers/mockawsxrayreceiver">github.com/open-telemetry/opentelemetry-collector-contrib/testbed/mockdatareceivers/mockawsxrayreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-collector-contrib/testbed/testbed">github.com/open-telemetry/opentelemetry-collector-contrib/testbed/testbed</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-lambda-extension">github.com/open-telemetry/opentelemetry-lambda-extension</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/open-telemetry/opentelemetry-lambda/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-lambda/collector">github.com/open-telemetry/opentelemetry-lambda/collector</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/open-telemetry/opentelemetry-lambda/collector/lambdacomponents">github.com/open-telemetry/opentelemetry-lambda/collector/lambdacomponents</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/opstrace/opstrace/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/opstrace/opstrace/go/cmd/tracing">github.com/opstrace/opstrace/go/cmd/tracing</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/opstrace/opstrace/go/pkg/opstraceauthextension">github.com/opstrace/opstrace/go/pkg/opstraceauthextension</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/parallelstream/opentelemetry-collector-contrib/exporter/splunkhecexporter">github.com/parallelstream/opentelemetry-collector-contrib/exporter/splunkhecexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/pavolloffay/opentelemetry-collector-releases/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pavolloffay/opentelemetry-collector-releases/distributions/otelcol/_build">github.com/pavolloffay/opentelemetry-collector-releases/distributions/otelcol/_build</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pavolloffay/opentelemetry-collector-releases/processor/example">github.com/pavolloffay/opentelemetry-collector-releases/processor/example</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/pmalek-sumo/opentelemetry-collector/ (52)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/cmd/otelcol">github.com/pmalek-sumo/opentelemetry-collector/cmd/otelcol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/component/componenthelper">github.com/pmalek-sumo/opentelemetry-collector/component/componenthelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/component/componenttest">github.com/pmalek-sumo/opentelemetry-collector/component/componenttest</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/config">github.com/pmalek-sumo/opentelemetry-collector/config</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/config/configcheck">github.com/pmalek-sumo/opentelemetry-collector/config/configcheck</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/config/configtest">github.com/pmalek-sumo/opentelemetry-collector/config/configtest</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/exporterhelper">github.com/pmalek-sumo/opentelemetry-collector/exporter/exporterhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/fileexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/fileexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/jaegerexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/jaegerexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/kafkaexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/kafkaexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/loggingexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/loggingexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/opencensusexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/opencensusexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/otlpexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/otlpexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/otlphttpexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/otlphttpexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/prometheusexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/prometheusexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/prometheusremotewriteexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/prometheusremotewriteexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/exporter/zipkinexporter">github.com/pmalek-sumo/opentelemetry-collector/exporter/zipkinexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/extension/extensionhelper">github.com/pmalek-sumo/opentelemetry-collector/extension/extensionhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/extension/fluentbitextension">github.com/pmalek-sumo/opentelemetry-collector/extension/fluentbitextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/extension/healthcheckextension">github.com/pmalek-sumo/opentelemetry-collector/extension/healthcheckextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/extension/pprofextension">github.com/pmalek-sumo/opentelemetry-collector/extension/pprofextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/extension/zpagesextension">github.com/pmalek-sumo/opentelemetry-collector/extension/zpagesextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/attributesprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/attributesprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/batchprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/batchprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/filterprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/filterprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/memorylimiter">github.com/pmalek-sumo/opentelemetry-collector/processor/memorylimiter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/processorhelper">github.com/pmalek-sumo/opentelemetry-collector/processor/processorhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/resourceprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/resourceprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/samplingprocessor/probabilisticsamplerprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/samplingprocessor/probabilisticsamplerprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/processor/spanprocessor">github.com/pmalek-sumo/opentelemetry-collector/processor/spanprocessor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/fluentforwardreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/fluentforwardreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/cpuscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/cpuscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/diskscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/diskscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/loadscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/loadscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/networkscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/networkscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/pagingscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/pagingscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/processesscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/processesscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/processscraper">github.com/pmalek-sumo/opentelemetry-collector/receiver/hostmetricsreceiver/internal/scraper/processscraper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/jaegerreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/jaegerreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/kafkareceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/kafkareceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/opencensusreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/opencensusreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/otlpreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/otlpreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/prometheusreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/prometheusreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/receiverhelper">github.com/pmalek-sumo/opentelemetry-collector/receiver/receiverhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/scraperhelper">github.com/pmalek-sumo/opentelemetry-collector/receiver/scraperhelper</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/receiver/zipkinreceiver">github.com/pmalek-sumo/opentelemetry-collector/receiver/zipkinreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/service">github.com/pmalek-sumo/opentelemetry-collector/service</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/service/builder">github.com/pmalek-sumo/opentelemetry-collector/service/builder</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/service/defaultcomponents">github.com/pmalek-sumo/opentelemetry-collector/service/defaultcomponents</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/testbed/correctness/metrics">github.com/pmalek-sumo/opentelemetry-collector/testbed/correctness/metrics</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/pmalek-sumo/opentelemetry-collector/testbed/testbed">github.com/pmalek-sumo/opentelemetry-collector/testbed/testbed</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/rongduan-zhu/opentelemetry-collector-azuremonitor">github.com/rongduan-zhu/opentelemetry-collector-azuremonitor</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/rquedas/otel4devs/collector/receiver/trace-receiver/tailtracer">github.com/rquedas/otel4devs/collector/receiver/trace-receiver/tailtracer</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/signalfx/splunk-otel-collector/ (10)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/cmd/otelcol">github.com/signalfx/splunk-otel-collector/cmd/otelcol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/components">github.com/signalfx/splunk-otel-collector/internal/components</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/components/componenttest">github.com/signalfx/splunk-otel-collector/internal/components/componenttest</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/configprovider">github.com/signalfx/splunk-otel-collector/internal/configprovider</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/exporter/httpsinkexporter">github.com/signalfx/splunk-otel-collector/internal/exporter/httpsinkexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/exporter/pulsarexporter">github.com/signalfx/splunk-otel-collector/internal/exporter/pulsarexporter</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/extension/smartagentextension">github.com/signalfx/splunk-otel-collector/internal/extension/smartagentextension</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/receiver/databricksreceiver">github.com/signalfx/splunk-otel-collector/internal/receiver/databricksreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/internal/receiver/smartagentreceiver">github.com/signalfx/splunk-otel-collector/internal/receiver/smartagentreceiver</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/signalfx/splunk-otel-collector/tests/testutils">github.com/signalfx/splunk-otel-collector/tests/testutils</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/sparam/opentelemetry-collector-contrib/exporter/pulsarexporter">github.com/sparam/opentelemetry-collector-contrib/exporter/pulsarexporter</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/tuyula/opentelemetry-collector-contrib/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/tuyula/opentelemetry-collector-contrib/internal/components">github.com/tuyula/opentelemetry-collector-contrib/internal/components</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/tuyula/opentelemetry-collector-contrib/internal/otelcontribcore">github.com/tuyula/opentelemetry-collector-contrib/internal/otelcontribcore</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/yubo/ (3)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/yubo/apiserver/pkg/config/configauth">github.com/yubo/apiserver/pkg/config/configauth</a></li>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>github.com/yubo/opentelemetry-collector/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/yubo/opentelemetry-collector/cmd/otelcol">github.com/yubo/opentelemetry-collector/cmd/otelcol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/github.com/yubo/opentelemetry-collector/internal/components">github.com/yubo/opentelemetry-collector/internal/components</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+      
+  
+    <details class="ImportedBy-details">
+      <summary>go.opentelemetry.io/collector/ (2)</summary>
+      <div class="ImportedBy-detailsContent">
+        
+  <ul class="ImportedBy-list">
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/go.opentelemetry.io/collector/cmd/otelcorecol">go.opentelemetry.io/collector/cmd/otelcorecol</a></li>
+  
+
+    
+      
+  
+    <li class="ImportedBy-detailsIndent"><a class="u-breakWord" href="/go.opentelemetry.io/collector/cmd/schemagen/schemagen">go.opentelemetry.io/collector/cmd/schemagen/schemagen</a></li>
+  
+
+    
+  </ul>
+
+      </div>
+    </details>
+  
+
+    
+  </ul>
+
+    
+  </div>
+
+</article>
+    <footer class="go-Main-footer"></footer>
+  </main>
+
+    
+  <footer class="go-Footer">
+    
+    <div class="go-Footer-links">
+      <div class="go-Footer-linkColumn">
+        <a href="https://go.dev/solutions" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Why Go
+        </a>
+        <a href="https://go.dev/solutions#use-cases" class="go-Footer-link"
+            data-gtmc="footer link">
+          Use Cases
+        </a>
+        <a href="https://go.dev/solutions#case-studies" class="go-Footer-link"
+            data-gtmc="footer link">
+          Case Studies
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://learn.go.dev/" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Get Started
+        </a>
+        <a href="https://play.golang.org" class="go-Footer-link" data-gtmc="footer link">
+          Playground
+        </a>
+        <a href="https://tour.golang.org" class="go-Footer-link" data-gtmc="footer link">
+          Tour
+        </a>
+        <a href="https://stackoverflow.com/questions/tagged/go?tab=Newest" class="go-Footer-link"
+            data-gtmc="footer link">
+          Stack Overflow
+        </a>
+        <a href="https://go.dev/help" class="go-Footer-link"
+            data-gtmc="footer link">
+          Help
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://pkg.go.dev" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Packages
+        </a>
+        <a href="/std" class="go-Footer-link" data-gtmc="footer link">
+          Standard Library
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://go.dev/project" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          About
+        </a>
+        <a href="https://go.dev/dl/" class="go-Footer-link" data-gtmc="footer link">Download</a>
+        <a href="https://go.dev/blog" class="go-Footer-link" data-gtmc="footer link">Blog</a>
+        <a href="https://github.com/golang/go/issues" class="go-Footer-link" data-gtmc="footer link">
+          Issue Tracker
+        </a>
+        <a href="https://go.dev/doc/devel/release.html" class="go-Footer-link"
+            data-gtmc="footer link">
+          Release Notes
+        </a>
+        <a href="https://blog.golang.org/go-brand" class="go-Footer-link" data-gtmc="footer link">
+          Brand Guidelines
+        </a>
+        <a href="https://go.dev/conduct" class="go-Footer-link" data-gtmc="footer link">
+          Code of Conduct
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://www.twitter.com/golang" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Connect
+        </a>
+        <a href="https://www.twitter.com/golang" class="go-Footer-link" data-gtmc="footer link">
+          Twitter
+        </a>
+        <a href="https://github.com/golang" class="go-Footer-link" data-gtmc="footer link">GitHub</a>
+        <a href="https://invite.slack.golangbridge.org/" class="go-Footer-link"
+            data-gtmc="footer link">
+          Slack
+        </a>
+        <a href="https://reddit.com/r/golang" class="go-Footer-link" data-gtmc="footer link">
+          r/golang
+        </a>
+        <a href="https://www.meetup.com/pro/go" class="go-Footer-link" data-gtmc="footer link">
+          Meetup
+        </a>
+        <a href="https://golangweekly.com/" class="go-Footer-link" data-gtmc="footer link">
+          Golang Weekly
+        </a>
+      </div>
+    </div>
+    <div class="go-Footer-bottom">
+      <img class="go-Footer-gopher"  width="1431" height="901"
+          src="/static/shared/gopher/pilot-bust-1431x901.svg" alt="Gopher in flight goggles">
+      <ul class="go-Footer-listRow">
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/copyright" data-gtmc="footer link">Copyright</a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/tos" data-gtmc="footer link">Terms of Service</a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="http://www.google.com/intl/en/policies/privacy/" data-gtmc="footer link"
+              target="_blank" rel="noopener">
+            Privacy Policy
+          </a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/s/pkgsite-feedback" target="_blank" rel="noopener"
+              data-gtmc="footer link">
+            Report an Issue
+          </a>
+        </li>
+        <li class="go-Footer-listItem">
+          <button class="go-Button go-Button--text go-Footer-toggleTheme js-toggleTheme" aria-label="Toggle theme">
+            <img data-value="auto" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/brightness_6_gm_grey_24dp.svg" alt="System theme">
+            <img data-value="dark" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/brightness_2_gm_grey_24dp.svg" alt="Dark theme">
+            <img data-value="light" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/light_mode_gm_grey_24dp.svg" alt="Light theme">
+          </button>
+          <button class="go-Button go-Button--text go-Footer-keyboard js-openShortcuts" aria-label="Open shorcuts modal">
+            <img class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/keyboard_grey_24dp.svg" alt="">
+          </button>
+        </li>
+      </ul>
+      <a class="go-Footer-googleLogo" href="https://google.com" target="_blank"rel="noopener"
+          data-gtmc="footer link">
+        <img class="go-Footer-googleLogoImg" height="24" width="72"
+            src="/static/shared/logo/google-white.svg" alt="Google logo">
+      </a>
+    </div>
+  </footer>
+
+    
+  <dialog id="jump-to-modal" class="JumpDialog go-Modal go-Modal--md js-modal">
+    <form method="dialog" data-gmtc="jump to form" aria-label="Jump to Identifier">
+      <div class="Dialog-title go-Modal-header">
+        <h2>Jump to</h2>
+        <button
+          class="go-Button go-Button--inline"
+          type="button"
+          data-modal-close
+          data-gtmc="modal button"
+          aria-label="Close"
+        >
+          <img
+            class="go-Icon"
+            height="24"
+            width="24"
+            src="/static/shared/icon/close_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="JumpDialog-filter">
+        <input class="JumpDialog-input go-Input" autocomplete="off" type="text">
+      </div>
+      <div class="JumpDialog-body go-Modal-body">
+        <div class="JumpDialog-list"></div>
+      </div>
+      <div class="go-Modal-actions">
+        <button class="go-Button" data-test-id="close-dialog">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="ShortcutsDialog go-Modal go-Modal--sm js-modal">
+    <form method="dialog">
+      <div class="go-Modal-header">
+        <h2>Keyboard shortcuts</h2>
+        <button
+          class="go-Button go-Button--inline"
+          type="button"
+          data-modal-close
+          data-gtmc="modal button"
+          aria-label="Close"
+        >
+          <img
+            class="go-Icon"
+            height="24"
+            width="24"
+            src="/static/shared/icon/close_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="go-Modal-body">
+        <table>
+          <tbody>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>?</strong></td><td> : This menu</td>
+            </tr>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>/</strong></td><td> : Search site</td>
+            </tr>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>f</strong> or <strong>F</strong></td><td> : Jump to</td>
+            </tr>
+            <tr>
+              <td class="ShortcutsDialog-key"><strong>y</strong> or <strong>Y</strong></td>
+              <td> : Canonical URL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="go-Modal-actions">
+        <button class="go-Button" data-test-id="close-dialog">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+    
+      <script>
+        // this will throw if the querySelector can’t find the element
+        const gtmId = document.querySelector('.js-gtmID').dataset.gtmid;
+        if (!gtmId) {
+          throw new Error('Google Tag Manager ID not found');
+        }
+        loadScript(`https://www.googletagmanager.com/gtm.js?id=${gtmId}`);
+      </script>
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8MVQXG"
+                height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+    
+    
+  
+  <script>
+    loadScript('/static/frontend/unit/unit.js')
+  </script>
+
+  </body>
+</html>

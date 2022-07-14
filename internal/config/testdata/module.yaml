@@ -1,0 +1,4 @@
+modules:
+  - path: "go.opentelemetry.io/collector/component"
+    base_version: "v0.55.0"
+    target_version: "v0.56.0"

@@ -1,0 +1,16 @@
+[
+  "github.com/grafana/agent/pkg/traces/promsdprocessor",
+  "github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension",
+  "github.com/open-telemetry/opentelemetry-collector-contrib/extension/oidcauthextension",
+  "github.com/open-telemetry/opentelemetry-collector-contrib/internal/coreinternal/attraction",
+  "github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor",
+  "github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sprocessor",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/jaegerreceiver",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/opencensusreceiver/octrace",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/otlpreceiver/logs",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/otlpreceiver/metrics",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/otlpreceiver/trace",
+  "github.com/pmalek-sumo/opentelemetry-collector/receiver/zipkinreceiver",
+  "github.com/yubo/apiserver/pkg/config/configgrpc",
+  "github.com/yubo/opentelemetry-collector/internal/coreinternal/attraction"
+]
